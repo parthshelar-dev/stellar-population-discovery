@@ -139,7 +139,7 @@ stellar-population-discovery/
 ### KMeans — `06_kmeans.ipynb`
 - Used Elbow Method and Silhouette Score to find optimal K
 - Applied on all 4 PCA components
-- Identified 4 cluster groups in the stellar data
+- Centroid-based clustering identifying spherical cluster structures
 
 ### DBSCAN — `07_dbscan.ipynb`
 - Used K-Distance Graph to find optimal epsilon
