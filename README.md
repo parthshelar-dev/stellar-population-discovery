@@ -222,8 +222,8 @@ This project demonstrates that unsupervised machine learning can successfully id
 ## Installation
 
 ```bash
-git clone https://github.com/parthshelar-dev/stellar-population
-cd stellar-population
+git clone https://github.com/parthshelar-dev/stellar-population-discovery
+cd stellar-population-discovery
 pip install -r requirements.txt
 ```
 
@@ -240,4 +240,4 @@ pip install -r requirements.txt
 
 **Parth Shelar**
 AI & Data Science | KBTCOE
-[LinkedIn](https://www.linkedin.com/in/your-linkedin)
+[LinkedIn](https://www.linkedin.com/in/parth-shelar)
