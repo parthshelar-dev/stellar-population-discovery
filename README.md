@@ -16,6 +16,27 @@ without any prior labels.
 
 ---
 
+## Objective
+
+The goal of this project is to discover naturally occurring stellar populations in the Milky Way using unsupervised machine learning techniques without relying on predefined labels.
+
+The project explores whether stars can be grouped into meaningful populations based on their physical properties, motion, and distance measurements obtained from Gaia DR3.
+
+---
+
+## Why This Matters
+
+Astronomers study stellar populations to understand:
+
+- Star formation history
+- Galactic evolution
+- Stellar life cycles
+- Rare and unusual stellar objects
+
+Machine learning can help identify hidden structures in large astronomical datasets that are difficult to detect manually.
+
+---
+
 ## Dataset
 
 - **Source:** Gaia Data Release 3 (DR3)
@@ -158,6 +179,12 @@ cluster separation in 4-dimensional PCA space.
 - 367 anomalous stars identified by DBSCAN — potential outliers or
   rare stellar objects
 - Cluster separation clearly visible in 3D PCA space
+
+---
+
+## Conclusion
+
+This project demonstrates that unsupervised machine learning can successfully identify meaningful stellar populations from Gaia DR3 data. Among the evaluated methods, KMeans achieved the highest silhouette score, while DBSCAN provided the additional capability of detecting anomalous stars. The results suggest that stellar populations exhibit separable structures in PCA-transformed feature space and can be effectively analyzed using clustering techniques.
 
 ---
 
