@@ -54,7 +54,7 @@ Machine learning can help identify hidden structures in large astronomical datas
 ## Project Structure
 
 ```
-Stellar Population/
+stellar-population-discovery/
 ├── data/
 │   ├── gaia_raw.csv
 │   ├── gaia_cleaned.csv
@@ -84,6 +84,8 @@ Stellar Population/
 │   ├── 07_dbscan.ipynb
 │   ├── 08_hierarchical.ipynb
 │   └── 09_comparison.ipynb
+├── .gitignore
+├── LICENSE
 ├── README.md
 └── requirements.txt
 ```
