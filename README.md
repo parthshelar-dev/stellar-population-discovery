@@ -232,7 +232,7 @@ pip install -r requirements.txt
 ## Future Improvements
 - [ ] Interactive Plotly dashboard for cluster visualization
 - [ ] t-SNE visualization for comparison with PCA
-- [ ] HR Diagram mapping of discovered clusters
+- [ ] Cluster-wise HR Diagram analysis for K-Means, HDBSCAN, and Hierarchical Clustering
 
 ---
 
