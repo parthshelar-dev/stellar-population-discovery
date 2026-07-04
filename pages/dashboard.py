@@ -119,7 +119,7 @@ def load_data():
 df_kmeans, df_dbscan, df_hierarchical, df_cleaned = load_data()
 
 
-st.sidebar.page_link("Home.py", label="🪐 Home", use_container_width=True)
+st.sidebar.page_link("home.py", label="🪐 Home", use_container_width=True)
 st.sidebar.markdown("---")
 st.sidebar.title("🔭 Observatory")
 
