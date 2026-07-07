@@ -150,7 +150,8 @@ stellar-population-discovery/
 
 ### Agglomerative Hierarchical — `08_hierarchical.ipynb`
 - Used Dendrogram (1,000 star sample) to visualize cluster hierarchy
-- Applied on a representative 10,000-star sample due to the high computational and memory requirements of Agglomerative Hierarchical Clustering- Used Ward linkage with 3 clusters
+- Applied on a 10,000-star representative sample due to high computational cost
+- Used Ward linkage with 3 clusters
 - Applied on all 4 PCA components
 
 ---
