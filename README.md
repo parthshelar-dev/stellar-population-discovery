@@ -42,6 +42,7 @@ Machine learning can help identify hidden structures in large astronomical datas
 - **Source:** Gaia Data Release 3 (DR3)
 - **Query Tool:** astroquery (ESA Gaia Archive)
 - **Stars Fetched:** 50,000
+- > **Dataset Note:** The Gaia DR3 dataset contains approximately 50,000 stars after preprocessing. K-Means and DBSCAN were applied to the full dataset. Agglomerative Hierarchical Clustering was performed on a representative 10,000-star sample due to its significantly higher computational and memory requirements.
 - **Features Used:** ra, dec, parallax, parallax_error, pmra, pmdec,
   phot_g_mean_mag, bp_rp, teff_gspphot
 - **Query Filters Applied:**
@@ -149,8 +150,7 @@ stellar-population-discovery/
 
 ### Agglomerative Hierarchical — `08_hierarchical.ipynb`
 - Used Dendrogram (1,000 star sample) to visualize cluster hierarchy
-- Applied on 10,000 star sample due to O(n²) time complexity
-- Used Ward linkage with 3 clusters
+- Applied on a representative 10,000-star sample due to the high computational and memory requirements of Agglomerative Hierarchical Clustering- Used Ward linkage with 3 clusters
 - Applied on all 4 PCA components
 
 ---
@@ -167,6 +167,8 @@ cluster separation in 4-dimensional PCA space.
 | KMeans       | 0.4823          |
 | DBSCAN       | 0.4060          |
 | Hierarchical | 0.4687          |
+
+> **Evaluation Note:** The project compares clustering behavior across different algorithms. K-Means and DBSCAN were trained on the full dataset (~50,000 stars), whereas Agglomerative Hierarchical Clustering was trained on a representative 10,000-star sample due to computational constraints. Therefore, silhouette scores should be interpreted as performance indicators within their respective experimental setups rather than perfectly one-to-one comparisons across all algorithms.
 
 - **KMeans** performs best due to its centroid-based nature suiting the
   spherical cluster structure visible in PCA space
@@ -186,7 +188,7 @@ cluster separation in 4-dimensional PCA space.
 
 ## Conclusion
 
-This project demonstrates that unsupervised machine learning can successfully identify meaningful stellar populations from Gaia DR3 data. Among the evaluated methods, KMeans achieved the highest silhouette score, while DBSCAN provided the additional capability of detecting anomalous stars. The results suggest that stellar populations exhibit separable structures in PCA-transformed feature space and can be effectively analyzed using clustering techniques.
+This project demonstrates that unsupervised machine learning can successfully identify meaningful stellar populations from Gaia DR3 data. Under the experimental setup used in this project, KMeans achieved the highest silhouette score, while DBSCAN provided the additional capability of detecting anomalous stars. Agglomerative Hierarchical Clustering validated the underlying cluster structure on a representative 10,000-star sample, demonstrating the practical trade-off between computational efficiency and scalability. Overall, the results suggest that stellar populations exhibit separable structures in PCA-transformed feature space and can be effectively analyzed using unsupervised clustering techniques.
 
 ---
 
@@ -230,7 +232,7 @@ pip install -r requirements.txt
 ---
 
 ## Future Improvements
-- [ ] Interactive Plotly dashboard for cluster visualization
+- [x] Interactive Plotly dashboard for cluster visualization
 - [ ] t-SNE visualization for comparison with PCA
 - [ ] Cluster-wise HR Diagram analysis for K-Means, HDBSCAN, and Hierarchical Clustering
 
