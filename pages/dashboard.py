@@ -79,9 +79,9 @@ st.markdown("""
     }
 
     [data-testid="stSidebar"] .stSelectbox svg {
-        fill: #FFFFFF !important;
+        fill: #000000 !important;
+        color: #000000 !important;
     }
-
     [data-baseweb="popover"] {
         background-color: #3D2B89 !important;
     }
