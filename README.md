@@ -285,5 +285,4 @@ streamlit run home.py
 ## Author
 
 **Parth Shelar**
-AI & Data Science | KBTCOE
 [LinkedIn](https://www.linkedin.com/in/parth-shelar)
