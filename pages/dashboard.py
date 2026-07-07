@@ -239,36 +239,39 @@ with tab1:
     st.plotly_chart(fig_3d, use_container_width=True)
 
 with tab2:
-    st.subheader(f"2D Cluster Visualization — {algorithm}")
+    with st.container():
+        st.subheader(f"2D Cluster Visualization — {algorithm}")
 
-    col1, col2 = st.columns(2)
-    with col1:
-        x_axis = st.selectbox("X Axis", ["PC1", "PC2", "PC3", "PC4"], index=0)
-    with col2:
-        y_axis = st.selectbox("Y Axis", ["PC1", "PC2", "PC3", "PC4"], index=1)
+        col1, col2 = st.columns(2)
+        with col1:
+            x_axis = st.selectbox("X Axis", ["PC1", "PC2", "PC3", "PC4"], 
+                                  index=0, key="x_axis_select")
+        with col2:
+            y_axis = st.selectbox("Y Axis", ["PC1", "PC2", "PC3", "PC4"], 
+                                  index=1, key="y_axis_select")
 
-    fig_2d = px.scatter(
-        df.sample(min(15000, len(df)), random_state=42),
-        x=x_axis,
-        y=y_axis,
-        color='cluster_name',
-        title=f'{algorithm} Clustering — {x_axis} vs {y_axis}',
-        opacity=0.5,
-        hover_data={'cluster_name': True, x_axis: ':.2f', y_axis: ':.2f'}
-    )
-    fig_2d.update_traces(marker=dict(size=3))
-    fig_2d.update_layout(
-    height=550,
-    paper_bgcolor='#F8F9FA',
-    plot_bgcolor='#F8F9FA',
-    legend=dict(
-        font=dict(size=16),
-        itemsizing='constant',
-        itemwidth=40
+        fig_2d = px.scatter(
+            df.sample(min(15000, len(df)), random_state=42),
+            x=x_axis,
+            y=y_axis,
+            color='cluster_name',
+            title=f'{algorithm} Clustering — {x_axis} vs {y_axis}',
+            opacity=0.5,
+            hover_data={'cluster_name': True, x_axis: ':.2f', y_axis: ':.2f'}
         )
-    )
-    st.plotly_chart(fig_2d, use_container_width=True)
-
+        fig_2d.update_traces(marker=dict(size=3))
+        fig_2d.update_layout(
+            height=550,
+            paper_bgcolor='#F8F9FA',
+            plot_bgcolor='#F8F9FA',
+            legend=dict(
+                font=dict(size=16),
+                itemsizing='constant',
+                itemwidth=40
+            )
+        )
+        st.plotly_chart(fig_2d, use_container_width=True)
+        
 with tab3:
     st.subheader("Algorithm Comparison")
 
