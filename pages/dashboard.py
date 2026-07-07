@@ -105,6 +105,22 @@ st.markdown("""
     [data-testid="stSidebarNav"] {
         display: none !important;
     }
+
+    /* ===== Fix Selectbox Text Color ===== */
+
+[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] span {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+
+[data-testid="stSidebar"] .stSelectbox input {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+
+[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] {
+    color: #000000 !important;
+}
     </style>
 """, unsafe_allow_html=True)
 
