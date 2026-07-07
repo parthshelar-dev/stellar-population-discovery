@@ -42,7 +42,7 @@ Machine learning can help identify hidden structures in large astronomical datas
 - **Source:** Gaia Data Release 3 (DR3)
 - **Query Tool:** astroquery (ESA Gaia Archive)
 - **Stars Fetched:** 50,000
-- > **Dataset Note:** The Gaia DR3 dataset contains approximately 50,000 stars after preprocessing. K-Means and DBSCAN were applied to the full dataset. Agglomerative Hierarchical Clustering was performed on a representative 10,000-star sample due to its significantly higher computational and memory requirements.
+ > **Dataset Note:** The Gaia DR3 dataset contains approximately 50,000 stars after preprocessing. K-Means and DBSCAN were applied to the full dataset. Agglomerative Hierarchical Clustering was performed on a representative 10,000-star sample due to its significantly higher computational and memory requirements.
 - **Features Used:** ra, dec, parallax, parallax_error, pmra, pmdec,
   phot_g_mean_mag, bp_rp, teff_gspphot
 - **Query Filters Applied:**
